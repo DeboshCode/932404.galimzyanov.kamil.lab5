@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Камиль Галимзянов: идеи стартапов, навыки и ключевые метрики проектов.">
+    <title>Камиль Галимзянов — Предприниматель и стартапер</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="theme-light">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <header class="site-header">
+        <div class="container">
+            <p class="eyebrow">Предприниматель и стартапер</p>
+            <h1>Камиль Галимзянов</h1>
+            <p class="subtitle">Идеи, которые превращаются в проекты</p>
+            <nav class="navigation" aria-label="Основная навигация">
+                <a href="#skills">Навыки</a>
+                <a href="#ideas">Идеи стартапов</a>
+                <a href="#metrics">Ключевые метрики</a>
+                <a href="#revenue">Выручка</a>
+                <a href="#contact">Обратная связь</a>
+            </nav>
+            <button id="toggle-theme" class="secondary-button theme-control" type="button">Тёмная тема</button>
+        </div>
+    </header>
+
+    <main class="container" id="main" tabindex="-1">
+        <div class="intro">
+            <section id="skills" aria-labelledby="skills-title">
+                <h2 id="skills-title">Навыки</h2>
+                <ul class="skills-list">
+                    <li>Маркетинг и продвижение</li>
+                    <li>Управление проектами</li>
+                    <li>Финансовое планирование</li>
+                    <li>Анализ рынка</li>
+                </ul>
+            </section>
+            <aside class="about" aria-labelledby="about-title">
+                <img src="avatar.svg" alt="Иллюстрированный аватар Камиля Галимзянова" width="120" height="120">
+                <div>
+                    <h2 id="about-title">Моя ценность</h2>
+                    <p>Создавать полезные решения для людей и малого бизнеса. Начинать с проблемы, проверять идею и оценивать результат.</p>
+                </div>
+            </aside>
+        </div>
+
+        <section id="ideas" aria-labelledby="ideas-title">
+            <div class="section-heading">
+                <h2 id="ideas-title">Идеи стартапов</h2>
+                <p>Название, целевая аудитория и метрика для каждой идеи.</p>
+            </div>
+            <form id="idea-form" class="idea-form">
+                <div class="form-field">
+                    <label for="idea-name">Название идеи</label>
+                    <input id="idea-name" name="title" type="text" maxlength="80" required>
+                </div>
+                <div class="form-field">
+                    <label for="idea-audience">Целевая аудитория</label>
+                    <input id="idea-audience" name="audience" type="text" maxlength="160" required>
+                </div>
+                <div class="form-field">
+                    <label for="idea-metric">Метрика</label>
+                    <input id="idea-metric" name="metric" type="text" maxlength="120" required>
+                </div>
+                <button type="submit">Добавить идею</button>
+            </form>
+            <div class="ideas-actions">
+                <button id="delete-last-idea" class="secondary-button" type="button">Удалить последнюю</button>
+                <button id="toggle-ideas" class="secondary-button" type="button" aria-controls="ideas-list" aria-expanded="true">Скрыть идеи</button>
+            </div>
+            <p id="ideas-message" class="ideas-message" role="status" aria-live="polite"></p>
+            <div id="ideas-list" class="ideas-list"></div>
+            <noscript><p>Для управления идеями включите JavaScript.</p></noscript>
+        </section>
+
+        <section id="metrics" aria-labelledby="metrics-title">
+            <div class="section-heading">
+                <h2 id="metrics-title">Ключевые метрики</h2>
+                <p>Пример показателей проекта «Учёт без таблиц» за апрель — июнь.</p>
+            </div>
+            <div class="metrics-grid">
+                <article class="metric-card" aria-labelledby="mau-title">
+                    <h3 id="mau-title"><abbr title="Monthly Active Users">MAU</abbr></h3>
+                    <p class="metric-description">Активные пользователи за месяц</p>
+                    <p class="metric-value">1&nbsp;200 <span>человек</span></p>
+                    <figure>
+                        <svg class="chart" viewBox="0 0 240 100" aria-hidden="true" focusable="false">
+                            <path class="chart-guide" d="M10 15H230 M10 50H230 M10 85H230" />
+                            <polyline class="chart-line" points="10,85 120,56 230,15" />
+                            <circle class="chart-point" cx="10" cy="85" r="4" />
+                            <circle class="chart-point" cx="120" cy="56" r="4" />
+                            <circle class="chart-point" cx="230" cy="15" r="4" />
+                        </svg>
+                        <figcaption>Апрель: 600 · Май: 850 · Июнь: 1&nbsp;200</figcaption>
+                    </figure>
+                </article>
+                <article class="metric-card" aria-labelledby="ltv-title">
+                    <h3 id="ltv-title"><abbr title="Lifetime Value">LTV</abbr></h3>
+                    <p class="metric-description">Доход от клиента за всё время</p>
+                    <p class="metric-value">6&nbsp;000 <span>₽</span></p>
+                    <figure>
+                        <svg class="chart" viewBox="0 0 240 100" aria-hidden="true" focusable="false">
+                            <path class="chart-guide" d="M10 15H230 M10 50H230 M10 85H230" />
+                            <polyline class="chart-line" points="10,85 120,50 230,15" />
+                            <circle class="chart-point" cx="10" cy="85" r="4" />
+                            <circle class="chart-point" cx="120" cy="50" r="4" />
+                            <circle class="chart-point" cx="230" cy="15" r="4" />
+                        </svg>
+                        <figcaption>Апрель: 4&nbsp;800&nbsp;₽ · Май: 5&nbsp;400&nbsp;₽ · Июнь: 6&nbsp;000&nbsp;₽</figcaption>
+                    </figure>
+                </article>
+                <article class="metric-card" aria-labelledby="cac-title">
+                    <h3 id="cac-title"><abbr title="Customer Acquisition Cost">CAC</abbr></h3>
+                    <p class="metric-description">Стоимость привлечения клиента</p>
+                    <p class="metric-value">1&nbsp;500 <span>₽</span></p>
+                    <figure>
+                        <svg class="chart" viewBox="0 0 240 100" aria-hidden="true" focusable="false">
+                            <path class="chart-guide" d="M10 15H230 M10 50H230 M10 85H230" />
+                            <polyline class="chart-line" points="10,15 120,57 230,85" />
+                            <circle class="chart-point" cx="10" cy="15" r="4" />
+                            <circle class="chart-point" cx="120" cy="57" r="4" />
+                            <circle class="chart-point" cx="230" cy="85" r="4" />
+                        </svg>
+                        <figcaption>Апрель: 2&nbsp;000&nbsp;₽ · Май: 1&nbsp;700&nbsp;₽ · Июнь: 1&nbsp;500&nbsp;₽</figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+
+        <section class="revenue" id="revenue" aria-labelledby="revenue-title">
+            <div class="section-heading">
+                <h2 id="revenue-title">Выручка за неделю</h2>
+                <p>Два примера дневной выручки за семь дней.</p>
+            </div>
+            <div class="revenue-actions">
+                <button id="regular-week" type="button">Обычная неделя</button>
+                <button id="low-week" class="secondary-button" type="button">Неделя с низкой выручкой</button>
+            </div>
+            <div class="revenue-result" role="status" aria-live="polite" aria-atomic="true">
+                <h3 id="revenue-example-title">Обычная неделя</h3>
+                <p><strong>Дневная выручка, ₽:</strong> <span id="revenue-values"></span></p>
+                <dl class="revenue-summary">
+                    <div>
+                        <dt>Общая выручка</dt>
+                        <dd id="revenue-total"></dd>
+                    </div>
+                    <div>
+                        <dt>Максимальная выручка за день</dt>
+                        <dd id="revenue-max"></dd>
+                    </div>
+                    <div>
+                        <dt>Средняя выручка за день</dt>
+                        <dd id="revenue-average"></dd>
+                    </div>
+                    <div>
+                        <dt>Дни с выручкой &gt; 10&nbsp;000&nbsp;₽</dt>
+                        <dd id="revenue-high-count"></dd>
+                    </div>
+                    <div>
+                        <dt>Дни с выручкой ≤ 3&nbsp;000&nbsp;₽</dt>
+                        <dd id="revenue-low-count"></dd>
+                    </div>
+                    <div>
+                        <dt>Доля дней с низкой выручкой</dt>
+                        <dd id="revenue-low-share"></dd>
+                    </div>
+                </dl>
+                <p><strong>Выручка свыше 10&nbsp;000&nbsp;₽:</strong> <span id="revenue-high-values"></span></p>
+            </div>
+            <noscript><p>Для расчёта выручки включите JavaScript.</p></noscript>
+        </section>
+
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Обратная связь</h2>
+            <p>Обсудить идею или посмотреть другие проекты можно в моём профиле на <a href="https://github.com/DeboshCode">GitHub</a>.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 Камиль Галимзянов</p>
+            <a href="https://github.com/DeboshCode/932404.galimzyanov.kamil.lab5">Репозиторий проекта</a>
+        </div>
+    </footer>
+</body>
+</html>
